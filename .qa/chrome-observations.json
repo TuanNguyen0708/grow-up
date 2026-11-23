@@ -1,0 +1,32 @@
+{
+  "1440x900": {
+    "closedEnvelopeWidth": 620,
+    "closedEnvelopeHeight": 400,
+    "seal": "Grow Up",
+    "invitationHiddenBeforeActivation": true,
+    "keyboardFocus": "open-invitation",
+    "focusOutline": "solid",
+    "enterRevealsPersonalizedInvitation": true,
+    "flapFlipsAndLetterRises": true
+  },
+  "768x900": {
+    "longAccentedNameMatches": true,
+    "detailsBeforePoster": true,
+    "noOverflow": true,
+    "focusAfterOpening": "invitation-title",
+    "wordmark": "Grow Up English",
+    "blankNameFallback": true,
+    "immediateRevealWithMotionStylesDisabled": true,
+    "defaultContentWithoutScript": true
+  },
+  "390x844": {
+    "invitationHiddenBeforeActivation": true,
+    "openedEnvelopeAndLogoFit": true,
+    "automaticRevealAfterAnimation": true,
+    "noOverflow": true,
+    "detailsAboveFold": true,
+    "whitespaceNameFallback": true,
+    "date": "2026-11-29",
+    "venueMatches": true
+  }
+}

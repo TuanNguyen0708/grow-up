@@ -1,0 +1,25 @@
+{
+  "contract": "../README.md#design-contract",
+  "targetViewports": ["390x844", "768x900", "1440x900"],
+  "accessibility": {
+    "status": "pass",
+    "evidence": "The Chrome accessibility tree exposes a labeled opening button but not the hidden invitation. Tab focuses the button with a visible outline; Enter opens it and focus moves to the heading. The animation is scoped to no-preference; removing the motion styles confirmed the immediate-reveal path. This is a targeted check, not a full accessibility audit."
+  },
+  "responsive": {
+    "status": "pass",
+    "evidence": "Inspected the closed and opened envelope on mobile and desktop, then inspected the invitation at tablet and desktop sizes. On mobile the envelope fits, the lifted sheet is visible, and the revealed event information appears above the fold. The long name wraps on tablet."
+  },
+  "contentStates": {
+    "loading": { "status": "not-applicable", "reason": "The opening sequence is an animation, not a fetch. The invitation and logo are included in the page." },
+    "empty": { "status": "pass", "evidence": "Missing, blank and whitespace-only names show the default greeting." },
+    "error": { "status": "pass", "evidence": "Disabling scripts in a sandboxed frame leaves the default invitation visible." },
+    "partial": { "status": "not-applicable", "reason": "All event details, art, and the vector logo are bundled in the same HTML file." },
+    "success": { "status": "pass", "evidence": "One activation flips the flap, raises the branded sheet, and automatically reveals the personalized invitation." },
+    "permission": { "status": "pass", "evidence": "Opening the invitation required no browser permission." }
+  },
+  "renderedEvidence": [
+    { "viewport": "390x844", "artifact": "chrome-observations.json", "observation": "The Grow Up seal is centered when closed, the full wordmark is visible on the lifted letter, and the date and venue display after opening." },
+    { "viewport": "768x900", "artifact": "chrome-observations.json", "observation": "A pointer click opens the invitation; the long accented name wraps and the SVG logo sits in the masthead." },
+    { "viewport": "1440x900", "artifact": "chrome-observations.json", "observation": "The 620 by 400 cream envelope opens to the raised letter, then to the branded green invitation. Keyboard activation works." }
+  ]
+}
